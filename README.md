@@ -2,7 +2,7 @@
 
 An automated daily temperature forecasting system for three California cities, with scheduled retraining, model versioning, and drift monitoring -- built to demonstrate the operational lifecycle of a machine learning system, not just the model itself.
 
-**Live app:** [https://weather-forecast-mlops-hcurhoayeg2xyvrddm6xli.streamlit.app/]
+**Live app:** [https://weather-forecast-mlops-hcurhoayeg2xyvrddm6xli.streamlit.app/](https://weather-forecast-mlops-hcurhoayeg2xyvrddm6xli.streamlit.app/)
 
 ![Rolling error trends](figures/error_trends.png)
 
