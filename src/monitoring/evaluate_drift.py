@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -59,6 +60,28 @@ def get_latest_validation_mae(city: str) -> float:
     return city_entries[-1]["validation_mae_c"]
 
 
+def fetch_with_retry(url: str, params: dict, max_attempts: int = 4, timeout: int = 45) -> dict:
+    """GET request with exponential backoff retry for transient network errors.
+
+    CI runners occasionally see slow TLS handshakes or brief network blips
+    that have nothing to do with the API itself -- retrying with backoff
+    is the standard, correct response rather than failing the whole job.
+    """
+    last_exc: Exception | None = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = requests.get(url, params=params, timeout=timeout)
+            response.raise_for_status()
+            return response.json()
+        except (requests.exceptions.RequestException,) as exc:
+            last_exc = exc
+            wait = min(2 ** attempt, 30)
+            print(f"    Request attempt {attempt}/{max_attempts} failed ({type(exc).__name__}), "
+                  f"retrying in {wait}s...")
+            time.sleep(wait)
+    raise RuntimeError(f"Failed after {max_attempts} attempts") from last_exc
+
+
 def fetch_recent_actuals(city: str, coords: dict, days: int = 14) -> pd.DataFrame:
     """Pull the most recent N days of actual observed temperatures."""
     from datetime import date, timedelta
@@ -73,15 +96,12 @@ def fetch_recent_actuals(city: str, coords: dict, days: int = 14) -> pd.DataFram
         "daily": "temperature_2m_max",
         "timezone": coords["tz"],
     }
-    response = requests.get(BASE_URL, params=params, timeout=30)
-    response.raise_for_status()
-    data = response.json()
+    data = fetch_with_retry(BASE_URL, params)
 
     return pd.DataFrame({
         "ds": pd.to_datetime(data["daily"]["time"]),
         "actual": data["daily"]["temperature_2m_max"],
     })
-
 
 def evaluate_city(city: str, coords: dict) -> dict:
     print(f"\n=== Evaluating {city} ===")

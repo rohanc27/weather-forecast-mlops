@@ -47,9 +47,21 @@ def pull_city(city_name: str, lat: float, lon: float, tz: str, years: int) -> pd
     }
 
     print(f"  Pulling {city_name}: {start_date} to {end_date}...")
-    response = requests.get(BASE_URL, params=params, timeout=30)
-    response.raise_for_status()
-    data = response.json()
+    data = None
+    last_exc = None
+    for attempt in range(1, 5):
+        try:
+            response = requests.get(BASE_URL, params=params, timeout=45)
+            response.raise_for_status()
+            data = response.json()
+            break
+        except requests.exceptions.RequestException as exc:
+            last_exc = exc
+            wait = min(2 ** attempt, 30)
+            print(f"    Attempt {attempt}/4 failed ({type(exc).__name__}), retrying in {wait}s...")
+            time.sleep(wait)
+    if data is None:
+        raise RuntimeError(f"Failed to pull {city_name} after 4 attempts") from last_exc
 
     df = pd.DataFrame({
         "date": pd.to_datetime(data["daily"]["time"]),
