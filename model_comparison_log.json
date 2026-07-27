@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2026-07-26T23:12:40.288683",
+    "model": "XGBoost",
+    "city": "mountain_view",
+    "mae": 3.801,
+    "rmse": 4.489
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.428582",
+    "model": "XGBoost",
+    "city": "san_francisco",
+    "mae": 3.099,
+    "rmse": 3.963
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.558070",
+    "model": "XGBoost",
+    "city": "los_angeles",
+    "mae": 2.228,
+    "rmse": 2.673
+  }
+]
