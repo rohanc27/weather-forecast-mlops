@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "timestamp": "2026-07-26T23:05:18.578877",
+    "feature": "BASELINE (seasonality only)",
+    "action": "baseline",
+    "city": "mountain_view",
+    "mae_before": 4.199,
+    "mae_after": 4.199,
+    "change_mae": 0,
+    "improvement_pct": 0.0
+  },
+  {
+    "timestamp": "2026-07-26T23:05:18.695708",
+    "feature": "BASELINE (seasonality only)",
+    "action": "baseline",
+    "city": "san_francisco",
+    "mae_before": 2.106,
+    "mae_after": 2.106,
+    "change_mae": 0,
+    "improvement_pct": 0.0
+  },
+  {
+    "timestamp": "2026-07-26T23:05:18.810137",
+    "feature": "BASELINE (seasonality only)",
+    "action": "baseline",
+    "city": "los_angeles",
+    "mae_before": 2.487,
+    "mae_after": 2.487,
+    "change_mae": 0,
+    "improvement_pct": 0.0
+  }
+]
