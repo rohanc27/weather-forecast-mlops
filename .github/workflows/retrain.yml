@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WORKFLOW_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,17 +26,11 @@ jobs:
 
       - name: Install system dependencies for Prophet
         run: |
-            git config user.name "Rohan Chakravarthi"
-            git config user.email "rohanc@gmail.com"
-    
           sudo apt-get update
           sudo apt-get install -y build-essential
 
       - name: Install Python dependencies
         run: |
-            git config user.name "Rohan Chakravarthi"
-            git config user.email "rohanc@gmail.com"
-    
           pip install --upgrade pip
           pip install -r requirements.txt
 
@@ -49,11 +45,8 @@ jobs:
 
       - name: Commit updated models and logs
         run: |
-            git config user.name "Rohan Chakravarthi"
-            git config user.email "rohanc@gmail.com"
-    
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "Rohan Chakravarthi"
+          git config user.email "rohanc@gmail.com"
           git add data/raw models monitoring
           git diff --staged --quiet || git commit -m "Automated daily retrain and drift check $(date -u +'%Y-%m-%d')"
           git push
