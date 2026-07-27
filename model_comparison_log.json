@@ -40,5 +40,26 @@
     "city": "los_angeles",
     "mae": 2.3,
     "rmse": 2.571
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.869212",
+    "model": "Random Forest",
+    "city": "mountain_view",
+    "mae": 3.711,
+    "rmse": 4.569
+  },
+  {
+    "timestamp": "2026-07-26T23:12:41.029571",
+    "model": "Random Forest",
+    "city": "san_francisco",
+    "mae": 2.963,
+    "rmse": 3.843
+  },
+  {
+    "timestamp": "2026-07-26T23:12:41.181811",
+    "model": "Random Forest",
+    "city": "los_angeles",
+    "mae": 2.301,
+    "rmse": 2.668
   }
 ]
