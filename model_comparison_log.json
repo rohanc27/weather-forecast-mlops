@@ -61,5 +61,26 @@
     "city": "los_angeles",
     "mae": 2.301,
     "rmse": 2.668
+  },
+  {
+    "timestamp": "2026-07-26T23:12:41.492467",
+    "model": "Ensemble (XGB+LR+RF)",
+    "city": "mountain_view",
+    "mae": 3.578,
+    "rmse": 4.395
+  },
+  {
+    "timestamp": "2026-07-26T23:12:41.757473",
+    "model": "Ensemble (XGB+LR+RF)",
+    "city": "san_francisco",
+    "mae": 3.002,
+    "rmse": 3.854
+  },
+  {
+    "timestamp": "2026-07-26T23:12:42.033868",
+    "model": "Ensemble (XGB+LR+RF)",
+    "city": "los_angeles",
+    "mae": 2.276,
+    "rmse": 2.597
   }
 ]
