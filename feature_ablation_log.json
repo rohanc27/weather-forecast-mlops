@@ -58,5 +58,35 @@
     "mae_after": 2.279,
     "change_mae": 0.208,
     "improvement_pct": 10.0
+  },
+  {
+    "timestamp": "2026-07-26T23:05:19.437704",
+    "feature": "ADD humidity",
+    "action": "regression",
+    "city": "mountain_view",
+    "mae_before": 4.485,
+    "mae_after": 3.995,
+    "change_mae": -0.49,
+    "improvement_pct": -10.9
+  },
+  {
+    "timestamp": "2026-07-26T23:05:19.559178",
+    "feature": "ADD humidity",
+    "action": "addition",
+    "city": "san_francisco",
+    "mae_before": 2.803,
+    "mae_after": 2.849,
+    "change_mae": 0.045,
+    "improvement_pct": 1.6
+  },
+  {
+    "timestamp": "2026-07-26T23:05:19.681223",
+    "feature": "ADD humidity",
+    "action": "addition",
+    "city": "los_angeles",
+    "mae_before": 2.279,
+    "mae_after": 2.279,
+    "change_mae": 0.0,
+    "improvement_pct": 0.0
   }
 ]
