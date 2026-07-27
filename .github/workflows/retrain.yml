@@ -24,11 +24,17 @@ jobs:
 
       - name: Install system dependencies for Prophet
         run: |
+            git config user.name "Rohan Chakravarthi"
+            git config user.email "rohanc@gmail.com"
+    
           sudo apt-get update
           sudo apt-get install -y build-essential
 
       - name: Install Python dependencies
         run: |
+            git config user.name "Rohan Chakravarthi"
+            git config user.email "rohanc@gmail.com"
+    
           pip install --upgrade pip
           pip install -r requirements.txt
 
@@ -43,6 +49,9 @@ jobs:
 
       - name: Commit updated models and logs
         run: |
+            git config user.name "Rohan Chakravarthi"
+            git config user.email "rohanc@gmail.com"
+    
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/raw models monitoring
