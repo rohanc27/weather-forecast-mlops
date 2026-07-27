@@ -118,5 +118,35 @@
     "mae_after": 2.303,
     "change_mae": -0.024,
     "improvement_pct": -1.0
+  },
+  {
+    "timestamp": "2026-07-26T23:05:20.342967",
+    "feature": "ADD windspeed",
+    "action": "addition",
+    "city": "mountain_view",
+    "mae_before": 3.246,
+    "mae_after": 3.521,
+    "change_mae": 0.275,
+    "improvement_pct": 8.5
+  },
+  {
+    "timestamp": "2026-07-26T23:05:20.474075",
+    "feature": "ADD windspeed",
+    "action": "addition",
+    "city": "san_francisco",
+    "mae_before": 2.642,
+    "mae_after": 2.766,
+    "change_mae": 0.124,
+    "improvement_pct": 4.7
+  },
+  {
+    "timestamp": "2026-07-26T23:05:20.606311",
+    "feature": "ADD windspeed",
+    "action": "addition",
+    "city": "los_angeles",
+    "mae_before": 2.123,
+    "mae_after": 2.213,
+    "change_mae": 0.09,
+    "improvement_pct": 4.2
   }
 ]
