@@ -19,5 +19,26 @@
     "city": "los_angeles",
     "mae": 2.228,
     "rmse": 2.673
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.645441",
+    "model": "Linear Regression",
+    "city": "mountain_view",
+    "mae": 3.355,
+    "rmse": 4.253
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.651563",
+    "model": "Linear Regression",
+    "city": "san_francisco",
+    "mae": 2.962,
+    "rmse": 3.776
+  },
+  {
+    "timestamp": "2026-07-26T23:12:40.657535",
+    "model": "Linear Regression",
+    "city": "los_angeles",
+    "mae": 2.3,
+    "rmse": 2.571
   }
 ]
