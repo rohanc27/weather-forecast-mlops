@@ -88,5 +88,35 @@
     "mae_after": 2.279,
     "change_mae": 0.0,
     "improvement_pct": 0.0
+  },
+  {
+    "timestamp": "2026-07-26T23:05:19.847233",
+    "feature": "ADD pressure",
+    "action": "addition",
+    "city": "mountain_view",
+    "mae_before": 3.598,
+    "mae_after": 3.796,
+    "change_mae": 0.198,
+    "improvement_pct": 5.5
+  },
+  {
+    "timestamp": "2026-07-26T23:05:19.992721",
+    "feature": "ADD pressure",
+    "action": "regression",
+    "city": "san_francisco",
+    "mae_before": 2.931,
+    "mae_after": 2.89,
+    "change_mae": -0.041,
+    "improvement_pct": -1.4
+  },
+  {
+    "timestamp": "2026-07-26T23:05:20.171705",
+    "feature": "ADD pressure",
+    "action": "regression",
+    "city": "los_angeles",
+    "mae_before": 2.327,
+    "mae_after": 2.303,
+    "change_mae": -0.024,
+    "improvement_pct": -1.0
   }
 ]
