@@ -4119,6 +4119,36 @@
       "data_start": "2021-11-11",
       "data_end": "2026-11-11",
       "model_path": "models/los_angeles/v_20261112T203418Z/model.joblib"
+    },
+    {
+      "city": "mountain_view",
+      "version": "20261113T201132Z",
+      "trained_at": "20261113T201132Z",
+      "train_rows": 1797,
+      "validation_mae_c": 2.517,
+      "data_start": "2021-11-12",
+      "data_end": "2026-11-12",
+      "model_path": "models/mountain_view/v_20261113T201132Z/model.joblib"
+    },
+    {
+      "city": "san_francisco",
+      "version": "20261113T201132Z",
+      "trained_at": "20261113T201132Z",
+      "train_rows": 1797,
+      "validation_mae_c": 2.394,
+      "data_start": "2021-11-12",
+      "data_end": "2026-11-12",
+      "model_path": "models/san_francisco/v_20261113T201132Z/model.joblib"
+    },
+    {
+      "city": "los_angeles",
+      "version": "20261113T201133Z",
+      "trained_at": "20261113T201133Z",
+      "train_rows": 1797,
+      "validation_mae_c": 3.735,
+      "data_start": "2021-11-12",
+      "data_end": "2026-11-12",
+      "model_path": "models/los_angeles/v_20261113T201133Z/model.joblib"
     }
   ]
 }
